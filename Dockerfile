@@ -17,4 +17,4 @@ WORKDIR /work
 COPY --from=builder /go/bin/* /usr/local/bin/
 COPY --from=builder /download/protoc/bin/* /usr/local/bin/
 COPY --from=builder /download/go/bin/* /usr/local/go/
-RUN echo PATH="$PATH:/usr/local/go" >> ~/.bashrc
+ENV PATH="$PATH:/usr/local/go"
